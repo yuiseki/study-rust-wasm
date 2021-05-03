@@ -67,6 +67,19 @@ npm run start
 
 Webブラウザで http://localhost:8080/ にアクセスする
 
+### `www` の `.git` ディレクトリを消す
+
+`npm init wasm-app www` で生成されたディレクトリはgitリポジトリになっているが、
+今回は一つのリポジトリで複数のrust wasmプロジェクトを置きたいので、
+`.git` ディレクトリを消す必要がある。
+
+`.git` のある子ディレクトリはGitHubなどにPushできない。
+
+```bash
+rm -rf .git
+```
+
+
 #### 変更をコミットする
 
 ```
