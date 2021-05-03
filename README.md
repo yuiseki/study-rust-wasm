@@ -292,3 +292,9 @@ npm run start
 ```
 
 Webブラウザで http://localhost:8080/ を開く
+
+#### 変更をコミットする
+```
+git add .
+git commit -m "add wasm-game-of-life"
+```
