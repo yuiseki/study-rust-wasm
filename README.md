@@ -55,6 +55,8 @@ edit `hello-wasm-pack/www/package.json`
   },
 ```
 
+`package.json` を変更したのでもう一度 `npm i`
+
 ```bash
 npm i
 ```
@@ -67,7 +69,8 @@ npm run start
 
 Webブラウザで http://localhost:8080/ にアクセスする
 
-### `www` の `.git` ディレクトリを消す
+#### 重要
+#### `www` の `.git` ディレクトリを消す
 
 `npm init wasm-app www` で生成されたディレクトリはgitリポジトリになっているが、
 今回は一つのリポジトリで複数のrust wasmプロジェクトを置きたいので、
