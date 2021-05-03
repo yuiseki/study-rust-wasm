@@ -26,3 +26,50 @@ echo "target" > .gitignore
 git add .
 git commit -m "init"
 ```
+
+## Hello worldをやってみる
+
+#### rust-wasmプロジェクトの生成
+```bash
+cargo generate --git https://github.com/rustwasm/wasm-pack-template --name hello-wasm-pack
+```
+
+#### rust-wasmプロジェクトのビルド
+```bash
+cd hello-wasm-pack
+wasm-pack build
+```
+
+#### Webページに組み込む
+```bash
+npm init wasm-app www
+cd www
+npm i
+```
+
+edit `hello-wasm-pack/www/package.json`
+
+```json
+  "dependencies": {
+    "hello-wasm-pack": "file:../pkg"
+  },
+```
+
+```bash
+npm i
+```
+
+#### 動作確認
+
+```bash
+npm run start
+```
+
+Webブラウザで http://localhost:8080/ にアクセスする
+
+#### 変更をコミットする
+
+```
+git add .
+git commit -m "add hello-wasm-pack"
+```
